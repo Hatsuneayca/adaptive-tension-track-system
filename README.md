@@ -1,39 +1,27 @@
-# adaptive-tension-track-system
-adaptive-tension-track-systems
-# AI-Supported Adaptive Tension Track System (Proof of Concept)
-
-This repository contains the 1D Proof of Concept (PoC) simulation for an **AI-Supported Adaptive Track Tension System** for armored vehicles. This work is currently a research project proposal being developed by Ayça Bahar Güner as an undergraduate student at **Dokuz Eylül University, Department of Mechanical Engineering**.
-
-## Project Overview
-The mobility of tracked armored vehicles is highly dependent on the mechanical interaction between the track and the terrain. Maintaining optimal track tension is critical for structural integrity and transmission efficiency. This project proposes an autonomous actuator system that processes real-time vehicle kinematics and terrain profile data to dynamically optimize track tension.
-
-## Repository Contents
-- `adaptive_tension_control.m`: The core MATLAB script. This simulation uses a PID controller with **Anti-Windup (Clamping)** logic to prevent actuator saturation issues while adjusting track tension across varying terrain conditions (Asphalt, Mud, Rocky).
-
-## Key Features
-- **Dynamic Terrain Modeling:** Simulates transitions between different terrain types with associated friction coefficients.
-- **Robust PID Control:** Implements anti-windup protection to maintain system stability when the actuator reaches physical limits.
-- **Control Signal Visualization:** Tracks actuator input signals against physical valve pressure limits to demonstrate controller stability.
-- **Data-Driven Approach:** Designed as a foundational stage for future integration with machine learning models and digital twin simulations.
-
-## How to Run
-1. Ensure you have **MATLAB** installed.
-2. Clone this repository or download `adaptive_tension_control.m`.
-3. Run the script in MATLAB.
-4. The simulation will generate 4 comprehensive plots illustrating:
-    - Vehicle Kinematics (Sensor Data)
-    - Terrain Friction Coefficient
-    - PID Performance (Target vs. Actual Tension)
-    - Actuator Control Signal with Physical Saturation Limits
-
-## Future Research Goals
-This PoC is currently being expanded into a full-scale research project involving:
-- **Digital Twin Development:** Implementing Multi-Body Dynamics in Simulink.
-- **Autonomous Optimization:** Replacing heuristic coefficients ($\alpha, \beta$) with optimized weights using Genetic Algorithms (GA) or Particle Swarm Optimization (PSO).
-- **Structural Validation:** Integrating FEA (ANSYS) for fatigue and stress analysis.
-
-## License
-This project is for academic research and educational purposes.
-
----
-*Developed by Ayça Bahar Güner | Dokuz Eylül University, Faculty of Engineering | May 2026*
+AI-Supported Adaptive Tension Track System
+1. Project Overview
+This repository contains the simulation and analysis of an AI-Supported Adaptive Tension Track System for tracked armored vehicles. The primary objective of this project is to optimize track tension in real-time based on terrain conditions and vehicle dynamics, thereby increasing the operational lifespan of the tracks and minimizing derailment risks.
+2. Methodology
+The project employs a hybrid approach combining Classical Control Theory and Statistical Robustness Analysis:
+ PID Control: A robust PID controller with an Anti-Windup mechanism is implemented to manage hydraulic tension.
+ AI Integration: The system uses a predictive logic (AI/ML-ready) to generate optimal tension references (T_{ref}) based on terrain and velocity inputs.
+ Monte Carlo Analysis: The system's robustness is validated through 100-run Monte Carlo simulations, injecting dynamic noise into terrain and velocity profiles.
+ Stability Analysis: System stability is verified using Frequency Domain analysis (Bode and Nichols plots).
+3. Key Features
+ Adaptive Control: Real-time tension adjustment based on variable ground friction (\mu) and vehicle speed.
+ Robustness Verification: Statistical analysis of the Root Mean Square Error (RMSE) over 100 varied scenarios.
+ Safety Protocols: Integral clamping (Anti-Windup) and derivative filtering to prevent actuator saturation and system instability.
+4. Analysis & Results
+The simulation generates a 4-panel report comprising:
+1 Robustness (Histogram): Distribution of RMSE across 100 stochastic runs.
+2 Stability (Bode Plot): Frequency response and Gain/Phase margin analysis.
+3 Robustness (Nichols Chart): Sensitivity and stability margins.
+4 Closed-Loop Step Response: System transient behavior and settling time.
+5. Technical Stack
+ Language: MATLAB
+ Control Design: PID, Anti-Windup, Derivative Filtering
+ Validation: Monte Carlo Simulation (100 iterations)
+6. How to Run
+1 Clone the repository: ⁠git clone https://github.com/Hatsuneayca/adaptive-tension-track-system.git⁠
+2 Open ⁠adaptive_tension_control.m⁠ in MATLAB.
+3 Run the script. The system will output the statistical analysis to the Command Window and display a 4-panel figure.
