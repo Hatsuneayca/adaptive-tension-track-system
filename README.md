@@ -444,8 +444,8 @@ Dokuz Eylül University (DEÜ), Izmir, Turkey
 Control systems, mechanical design, geopolitical analysis, AI-augmented engineering  
 **Languages:** Turkish (native), English (C1), German (B1-B2)
 
-📧 For questions: [your-email]  
-🔗 GitHub: [your-profile]
+📧 For questions: gunerayca1923@gmail.com
+🔗 GitHub: hatsuneayca
 
 -----
 
@@ -454,13 +454,7 @@ Control systems, mechanical design, geopolitical analysis, AI-augmented engineer
 This code is provided for educational and research purposes under the [MIT / Apache 2.0] license.
 Feel free to fork, modify, and share — with attribution.
 
------
-
-## Acknowledgments
-
-- **Prof. Dr. Zeki Kıral** (DEÜ Dynamics & Vibration) — advisor
-- **Emine** — internship mentor & networking support
-- MATLAB & Fuzzy Logic / Deep Learning Toolbox teams
+MATLAB & Fuzzy Logic / Deep Learning Toolbox teams
 
 -----
 
